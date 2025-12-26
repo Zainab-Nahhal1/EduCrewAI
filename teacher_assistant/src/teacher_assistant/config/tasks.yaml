@@ -1,0 +1,263 @@
+generate_lesson_plan:
+  description: >
+    Analyze the provided teaching notes carefully:
+    
+    {notes}
+    
+    Create a comprehensive, detailed lesson plan that includes ALL of the following sections:
+    
+    1. LESSON HEADER
+       - Engaging lesson title
+       - Subject area and grade level
+       - Estimated duration (45-50 minutes typical)
+       - Connection to educational standards
+    
+    2. LEARNING OBJECTIVES (3-5 clear, measurable objectives)
+       - Use action verbs from Bloom's Taxonomy
+       - Make them specific and assessable
+       - Align with the content in the notes
+    
+    3. MATERIALS AND RESOURCES
+       - All physical materials needed
+       - Technology requirements
+       - Handouts or worksheets
+       - Online resources with specific URLs or names
+    
+    4. LESSON ACTIVITIES WITH DETAILED TIMING
+       
+       A. WARM-UP / HOOK (5-10 minutes)
+          - Specific engaging opening activity
+          - How to activate prior knowledge
+          - Questions to ask students
+       
+       B. DIRECT INSTRUCTION (15-20 minutes)
+          - Key concepts to teach in order
+          - Examples and demonstrations
+          - Visual aids or models to use
+          - Questioning strategies throughout
+       
+       C. GUIDED PRACTICE (10-15 minutes)
+          - Specific practice problems or activities
+          - How teacher will check understanding
+          - Common errors to watch for
+       
+       D. INDEPENDENT PRACTICE (10-15 minutes)
+          - What students will do individually or in groups
+          - Clear success criteria
+          - How teacher will provide support
+       
+       E. CLOSURE (5 minutes)
+          - How to summarize key points
+          - Exit ticket or quick assessment
+          - Preview of next lesson
+    
+    5. ASSESSMENT STRATEGIES
+       - Formative assessment techniques during lesson
+       - Summative assessment plan
+       - How to measure each objective
+    
+    6. DIFFERENTIATION
+       - Accommodations for struggling learners
+       - Extensions for advanced learners
+       - Supports for ELL students
+    
+    7. TEACHER NOTES
+       - Important reminders
+       - Common pitfalls to avoid
+       - Time management tips
+    
+    Format the lesson plan professionally with clear sections and detailed instructions
+    that a substitute teacher could follow successfully.
+    
+  expected_output: >
+    A complete, professionally formatted lesson plan (1500-2000 words) with all
+    seven sections thoroughly developed. Each activity should have specific timing,
+    clear instructions, and practical implementation details. The plan should be
+    immediately usable in a classroom setting.
+
+generate_quiz:
+  description: >
+    Based on the teaching notes:
+    
+    {notes}
+    
+    And considering the lesson plan context that was just created, design a
+    comprehensive assessment quiz that thoroughly tests student understanding.
+    
+    Create a quiz with the following structure:
+    
+    SECTION 1: MULTIPLE CHOICE (3 questions, 30 points total)
+    - Create exactly 3 multiple choice questions
+    - Each worth 10 points
+    - Provide 4 answer options (A, B, C, D)
+    - Mix difficulty: 1 easy, 1 medium, 1 hard
+    - Align with specific learning objectives
+    
+    SECTION 2: SHORT ANSWER (3 questions, 30 points total)
+    - Create exactly 3 short answer questions
+    - Each worth 10 points
+    - Require 2-4 sentence responses
+    - Test comprehension and explanation skills
+    - Should go beyond simple recall
+    
+    SECTION 3: APPLICATION/PROBLEM SOLVING (2-4 questions, 40 points total)
+    - Create 2-4 application or problem-solving questions
+    - Worth 10-20 points each (total 40 points)
+    - Could include: word problems, scenarios, calculations,
+      diagrams to label or create, analysis tasks, or real-world applications
+    - Test higher-order thinking skills
+    
+    For EACH question provide:
+    1. Question number and complete text
+    2. Point value
+    3. Difficulty level (Easy/Medium/Hard)
+    4. Bloom's Taxonomy level (Remember/Understand/Apply/Analyze/Evaluate/Create)
+    
+    ANSWER KEY:
+    For each question provide:
+    - Correct answer
+    - Detailed explanation of why it's correct
+    - Common incorrect answers and why they're wrong
+    - Partial credit guidelines for short answer and problem-solving questions
+    
+    GRADING RUBRIC:
+    - Provide a clear rubric for grading short answer and application questions
+    - Include criteria for full credit, partial credit, and no credit
+    - Total points should equal 100
+    
+    The quiz should comprehensively assess all key concepts from the notes and
+    align perfectly with the learning objectives from the lesson plan.
+    
+  expected_output: >
+    A complete, well-formatted assessment quiz (1000-1500 words) with 8-10 questions
+    total across three sections. Include a comprehensive answer key with detailed
+    explanations, a grading rubric, and clear point distributions. The quiz should
+    be ready to print and administer.
+  context:
+    - generate_lesson_plan
+
+generate_teaching_suggestions:
+  description: >
+    Based on the teaching notes:
+    
+    {notes}
+    
+    And considering both the lesson plan and quiz that were created, provide
+    comprehensive teaching suggestions and strategies.
+    
+    Your guide must include ALL of these sections:
+    
+    1. STUDENT ENGAGEMENT STRATEGIES (5-6 strategies)
+       For each strategy provide:
+       - Strategy name and description
+       - Specific implementation steps
+       - When to use it in this lesson
+       - Why it's effective (cite research if applicable)
+       - Example dialogue or actions
+    
+    2. COMMON MISCONCEPTIONS (4-5 misconceptions)
+       For each misconception provide:
+       - What students incorrectly believe
+       - Why they think this (root cause)
+       - How to diagnose this misconception
+       - Specific correction strategy with example
+       - Follow-up questions to verify understanding
+    
+    3. DIFFERENTIATION STRATEGIES
+       
+       A. For Below Grade Level Students (3-4 strategies):
+          - Specific scaffolding techniques
+          - Modified materials or simplified versions
+          - Additional visual supports
+          - One-on-one intervention strategies
+       
+       B. For On Grade Level Students (2-3 strategies):
+          - Standard curriculum enhancements
+          - Collaborative learning activities
+          - Peer teaching opportunities
+       
+       C. For Above Grade Level Students (3-4 strategies):
+          - Extension activities and challenges
+          - Independent research projects
+          - Leadership and mentoring roles
+          - Connections to advanced topics
+       
+       D. For English Language Learners (3-4 strategies):
+          - Vocabulary scaffolding techniques
+          - Visual aids and graphic organizers
+          - Sentence frames and language supports
+          - Cultural connections and relevance
+       
+       E. For Students with Special Needs (2-3 strategies):
+          - Common IEP accommodations
+          - Assistive technology suggestions
+          - Modified assessment options
+    
+    4. REAL-WORLD APPLICATIONS (4-5 examples)
+       For each application:
+       - The specific real-world connection
+       - Why students should care about it
+       - A concrete example or current event
+       - How to present it in class (activity or discussion)
+       - Career connections if applicable
+    
+    5. ADDITIONAL RESOURCES
+       
+       A. Websites and Online Tools (3-4 resources):
+          - Specific URL or platform name
+          - What it offers
+          - How to integrate it into the lesson
+          - Grade-level appropriateness
+       
+       B. Videos (2-3 recommendations):
+          - Video title or search terms
+          - Approximate length
+          - What concepts it demonstrates
+          - Discussion questions to use after viewing
+       
+       C. Hands-On Activities (2-3 activities):
+          - Activity name and description
+          - Materials needed
+          - Step-by-step procedure
+          - Learning objectives addressed
+          - Estimated time
+       
+       D. Books or Articles (2-3 recommendations):
+          - Title and author
+          - Brief description
+          - Reading level
+          - How to incorporate (read-aloud, independent reading, reference)
+    
+    6. CLASSROOM MANAGEMENT TIPS (4-5 tips)
+       - Specific to THIS lesson's activities
+       - Potential behavioral challenges to anticipate
+       - Transition strategies between activities
+       - Strategies for maintaining engagement
+       - Time management techniques
+    
+    7. FORMATIVE ASSESSMENT TECHNIQUES (3-4 techniques)
+       - Quick checks for understanding during lesson
+       - Non-intrusive ways to gauge comprehension
+       - What to look for (student responses, body language)
+       - How to adjust instruction based on results
+    
+    8. TECHNOLOGY INTEGRATION (3-4 suggestions)
+       - Specific apps, software, or platforms
+       - Interactive whiteboard activities
+       - Student device activities
+       - Digital collaboration tools
+       - Online simulations or virtual labs
+    
+    Make every suggestion specific, practical, and immediately actionable. Include
+    concrete examples and avoid generic advice. Reference specific moments in the
+    lesson plan where each strategy would be most effective.
+    
+  expected_output: >
+    A comprehensive teaching guide (2000-2500 words) with all eight sections
+    thoroughly developed. Each suggestion should be specific, practical, and
+    include concrete examples. Provide enough detail that a teacher could
+    implement these strategies immediately without additional research. The
+    guide should feel like having an experienced mentor teacher in the room.
+  context:
+    - generate_lesson_plan
+    - generate_quiz

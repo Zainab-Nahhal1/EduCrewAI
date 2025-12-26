@@ -1,0 +1,26 @@
+.env
+.env.*
+.env.local
+__pycache__/
+*.py[cod]
+*.egg-info/
+output/
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.sqlite3
+.venv/
+venv/
+
+# Editor directories
+*.sublime-workspace
+*.sublime-project
+
+# Ignore installed packages
+pip-wheel-metadata/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
